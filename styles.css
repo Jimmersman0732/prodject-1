@@ -1,5 +1,5 @@
 /* Slide show */
-    {
+* {
     box-sizing: border-box
 }
 
@@ -8,11 +8,13 @@
     max-width: 1000px;
     position: relative;
     margin: auto;
+    height: 500px;
+
 }
 
 /* Hide the images by default */
 .mySlides {
-    display: none;
+    display: inline-block;
 }
 
 /* Next & previous buttons */
@@ -156,4 +158,76 @@
 
 body {
     color-scheme: lightblue 60%, darkblue 30%, black 10%;
+}
+
+/* text and backround colors */
+
+.sixty {}
+
+.thirdy {}
+
+.ten {}
+
+.form-form {
+
+    align-content: center;
+}
+
+
+/* carousel */
+
+/* /* .scroll-container {
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 500;
+    /* change this to whatever you want */
+/* height: auto;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+} */
+*/
+/* .scroll-item {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+} */
+
+/* .scroll-item img {
+    width: inherit;
+    height: auto;
+} */
+*/ .slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: 550px;
+    display: none;
+}
+
+.slideshow-container img.active {
+    display: block;
+}
+
+.slideshow-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.slideshow-container button.prev {
+    left: 0;
+}
+
+.slideshow-container button.next {
+    right: 0;
 }
