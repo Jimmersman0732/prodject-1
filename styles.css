@@ -1,252 +1,117 @@
-/* Slide show */
-* {
-    box-sizing: border-box
-}
-
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    height: 500px;
-
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: inline-block;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-
-
-/* drop down for examples */
-
-
-
-
-
-/* Style The Dropdown Button */
-.dropbtn {
-    background-color: white;
-    color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #f1f1f1
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: gold;
-}
-
+/* Mobile first approach */
+/* General styles */
 body {
-    color-scheme: lightblue 60%, darkblue 30%, black 10%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
 }
 
-/* text and backround colors */
-
-
-
-
-*/ .slideshow-container {
-    max-width: 600px;
-    position: relative;
-    margin: auto;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.slideshow-container img {
-    width: 100%;
-    height: 550px;
-    display: none;
-}
-
-.slideshow-container img.active {
-    display: block;
-}
-
-.slideshow-container button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px 15px;
-    font-size: 18px;
-}
-
-.slideshow-container button.prev {
-    left: 0;
-}
-
-.slideshow-container button.next {
-    right: 0;
-}
-
-.anta-regular {
-    font-family: "Anta", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.format {
-    color: gold;
-    background-color: black;
-    padding: 5%;
-}
-
+/* Header styles */
 header {
-    background-color: black;
-    color: white;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
 }
 
-h2 {
+/* Navigation styles */
+nav {
     text-align: center;
 }
 
-table {
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #333;
+}
+
+section p {
+    color: #555;
+}
+
+/* Form styles */
+form {
+    margin-top: 20px;
+}
+
+form table {
     width: 100%;
 }
 
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
+form table tr td {
+    padding: 10px;
 }
 
-th,
-td {
-    padding: 10px;
-    text-align: left;
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Social media section styles */
+#social-media {
+    background-color: #555;
+    padding: 10px 0;
 }
 
 .social-container {
-
-    box-sizing: border-box;
-    margin: 5px;
-    background-color: gold;
-
+    display: flex;
+    justify-content: center;
 }
 
-.scheme {
-    color-scheme: black 60%, gold 30%, white 10%;
+.social-container i {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 10px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+
+    /* Adjustments for smaller screens */
+    .container {
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Adjustments for even smaller screens */
+    nav ul li {
+        font-size: 14px;
+    }
+
+    .social-container i {
+        font-size: 20px;
+    }
 }

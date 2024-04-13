@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Trivia</title>
+    <link rel="stylesheet" href="trivia.css">
+    <script src="./trivia.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../main.html">Home</a></li>
+                <li><a href="#">Trivia</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="text-center">Trivia for the Jump Shot Lover</h1>
+        <form id="quizForm">
+            <ol>
+                <li>
+                    <h3>Who invented basketball?</h3>
+                    <input type="radio" name="q1" value="a"><label>James Naismith</label><br>
+                    <input type="radio" name="q1" value="b"><label>Michael Jordan</label><br>
+                    <input type="radio" name="q1" value="c"><label>LeBron James</label><br>
+                </li>
+                <li>
+                    <h3>What is the name of the highest professional basketball league in the United States?</h3>
+                    <input type="text" name="q2" placeholder="Your Answer"><br>
+                </li>
+                <li>
+                    <h3>Which player is known as "The Black Mamba"?</h3>
+                    <input type="radio" name="q3" value="a"><label>Michael Jordan</label><br>
+                    <input type="radio" name="q3" value="b"><label>Kobe Bryant</label><br>
+                    <input type="radio" name="q3" value="c"><label>LeBron James</label><br>
+                </li>
+                <li>
+                    <h3>Which team has won the most NBA championships?</h3>
+                    <input type="text" name="q4" placeholder="Your Answer"><br>
+                </li>
+                <li>
+                    <h3>Who holds the record for the most points scored in a single NBA game?</h3>
+                    <input type="radio" name="q5" value="a"><label>Michael Jordan</label><br>
+                    <input type="radio" name="q5" value="b"><label>Wilt Chamberlain</label><br>
+                    <input type="radio" name="q5" value="c"><label>Kobe Bryant</label><br>
+                </li>
+                <li>
+                    <h3>What is the regulation height of a basketball hoop in the NBA?</h3>
+                    <input type="text" name="q6" placeholder="Your Answer"><br>
+                </li>
+                <li>
+                    <h3>Which NBA player is known as "The Greek Freak"?</h3>
+                    <input type="radio" name="q7" value="a"><label>Kevin Durant</label><br>
+                    <input type="radio" name="q7" value="b"><label>Giannis Antetokounmpo</label><br>
+                    <input type="radio" name="q7" value="c"><label>LeBron James</label><br>
+                </li>
+                <li>
+                    <h3>Who is the NBA's all-time leading scorer?</h3>
+                    <input type="text" name="q8" placeholder="Your Answer"><br>
+                </li>
+                <li>
+                    <h3>Which NBA player has won the most MVP awards?</h3>
+                    <input type="radio" name="q9" value="a"><label>LeBron James</label><br>
+                    <input type="radio" name="q9" value="b"><label>Michael Jordan</label><br>
+                    <input type="radio" name="q9" value="c"><label>Kareem Abdul-Jabbar</label><br>
+                </li>
+                <li>
+                    <h3>What is the NBA team based in Toronto called?</h3>
+                    <input type="text" name="q10" placeholder="Your Answer"><br>
+                </li>
+            </ol>
+            <div class="text-center mt-3">
+                <button type="button" onclick="gradeQuiz()">Submit</button>
+                <button type="button" onclick="retryQuiz()">Retry</button>
+            </div>
+            <div id="results" class="text-center mt-3"></div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -7,10 +7,6 @@
     <title>Project 1: The Art of The Jump Shot</title>
     <link defer href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    </body>
     <link href="styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +18,8 @@
 </head>
 
 <body>
-    <Header>
-        <h1 style="color: gold;">The Art of The Jump Shot</h1>
+    <header>
+        <h1>The Art of The Jump Shot</h1>
         <!-- The navigation bar -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -36,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#in-the-beggining">In the Beggining</a>
+                            <a class="nav-link active" aria-current="page" href="#in-the-beggining">In The Beggining</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#the-jump-shot">The Jump Shot</a>
@@ -56,9 +52,12 @@
                                 </li>
                                 <li><a class="dropdown-item" href="#two-motion">Two Motion</a></li>
                                 <li>examples</li>
-                                <li><a class="dropdown-item" href="#jimmer-fredette">Jimmer fredette</a></li>
-                                <li><a class="dropdown-item" href="#kevin-durant"> Kevin Durant</a></li>
+                                <li><a class="dropdown-item" href="#jimmer-fredette">Jimmer Fredette</a></li>
+                                <li><a class="dropdown-item" href="#kevin-durant">Kevin Durant</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./new stuff/trivia.html">Trivia</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -69,8 +68,7 @@
             </div>
         </nav>
         <!-- end of nav bar -->
-
-    </Header>
+    </header>
 
     <main class="anta-regular format scheme">
 
@@ -268,14 +266,9 @@
         <!-- end of main text content -->
         <section>
             <div>
-                <h2>Your Sports Prefrences</h2>
+                <h2>Your Sports Preferences</h2>
             </div>
             <!-- form -->
-
-
-
-
-
             <form action="#" method="POST">
                 <table>
                     <tr>
@@ -301,24 +294,22 @@
                         </td>
                     </tr>
                     <tr>
-                        <p>Who is your Favorite NBA player?</p>
-
-
-                        <input type="radio" id="sc" name="fav_player" value="Stephen Curry">
-                        <label>Stephen Curry</label><br>
-                        <input type="radio" id="lbj" name="fav_player" value="Lebron James">
-                        <label>Lebron James</label><br>
-                        <input type="radio" id="kd" name="fav_player" value="Kevin Durant">
-                        <label>Kevin Durrant</label><br>
-                        <input type="radio" id="other" name="fav_player" value="other">
-                        <label>other</label>
+                        <td><label for="fav_player">Who is your Favorite NBA player?</label></td>
+                        <td colspan="2">
+                            <select id="fav_player" name="fav_player">
+                                <option value="Stephen Curry">Stephen Curry</option>
+                                <option value="Lebron James">Lebron James</option>
+                                <option value="Kevin Durant">Kevin Durant</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td><label for="message">Message:</label></td>
                         <td colspan="2"><textarea id="message" name="message" rows="4" cols="30"></textarea></td>
                     </tr>
                     <tr>
-                        <td><label for="q1">Question 1: List 2 NBA players(not active, you liked watching)</label></td>
+                        <td><label for="q1">Question 1: List 2 NBA players (not active, you liked watching)</label></td>
                         <td><input type="text" id="q1" name="q1"></td>
                         <td><input type="text" id="q2" name="q2"></td>
                     </tr>
@@ -334,48 +325,37 @@
                     </tr>
                     <tr>
                         <td><label for="q7">Question 4: What is your favorite sports number?</label></td>
-                        <td><input type="number" id="q7" name="q7"></td>
+                        <td colspan="2"><input type="number" id="q7" name="q7"></td>
                     </tr>
-
-
-                    <div>Type of Jump shots you like?<br>
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                        <label for="vehicle1"> Fade away</label><br>
-                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                        <label for="vehicle2"> step back</label><br>
-                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                        <label for="vehicle3"> off the dribble</label>
-                        <label for="vehicle2"> step back</label><br>
-                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                        <label for="vehicle3"> Catch and Shoot</label>
-                    </div>
-
+                    <tr>
+                        <td><label>Type of Jump shots you like?</label></td>
+                        <td colspan="2">
+                            <input type="checkbox" id="fadeaway" name="fadeaway" value="Fade away">
+                            <label for="fadeaway">Fade away</label><br>
+                            <input type="checkbox" id="stepback" name="stepback" value="Step back">
+                            <label for="stepback">Step back</label><br>
+                            <input type="checkbox" id="offthedribble" name="offthedribble" value="Off the dribble">
+                            <label for="offthedribble">Off the dribble</label><br>
+                            <input type="checkbox" id="catchandshoot" name="catchandshoot" value="Catch and Shoot">
+                            <label for="catchandshoot">Catch and Shoot</label><br>
+                        </td>
+                    </tr>
                 </table>
-
             </form>
-
         </section>
-
     </main>
-
     <footer>
-
-
-
     </footer>
-
-
     <section id="social-media" class="social-container">
         <center>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-tiktok"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
         </center>
     </section>
+    <footer>
+        <!-- This is a footer. -->
+    </footer>
 </body>
-<footer>
-    <!-- This is a footer. -->
-</footer>
-
 
 </html>
