@@ -7,6 +7,12 @@
     <title>Basketball Trivia</title>
     <link rel="stylesheet" href="trivia.css">
     <script src="./trivia.js"></script>
+    <style>
+        .answer {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,62 +30,75 @@
             <ol>
                 <li>
                     <h3>Who invented basketball?</h3>
-                    <input type="radio" name="q1" value="a"><label>James Naismith</label><br>
-                    <input type="radio" name="q1" value="b"><label>Michael Jordan</label><br>
-                    <input type="radio" name="q1" value="c"><label>LeBron James</label><br>
+                    <input type="text" name="q1" placeholder="Your Answer"><button type="button" id="show_answer_q1"
+                        onclick="showAnswer('q1')">Show Answer</button><br>
+                    <span id="answer_q1" class="answer" style="display: none;"></span>
                 </li>
                 <li>
                     <h3>What is the name of the highest professional basketball league in the United States?</h3>
-                    <input type="text" name="q2" placeholder="Your Answer"><br>
+                    <input type="text" name="q2" placeholder="Your Answer"><button type="button" id="show_answer_q2"
+                        onclick="showAnswer('q2')">Show Answer</button><br>
+                    <span id="answer_q2" class="answer" style="display: none;"></span>
                 </li>
                 <li>
                     <h3>Which player is known as "The Black Mamba"?</h3>
-                    <input type="radio" name="q3" value="a"><label>Michael Jordan</label><br>
-                    <input type="radio" name="q3" value="b"><label>Kobe Bryant</label><br>
-                    <input type="radio" name="q3" value="c"><label>LeBron James</label><br>
+                    <input type="text" name="q3" placeholder="Your Answer"><button type="button" id="show_answer_q3"
+                        onclick="showAnswer('q3')">Show Answer</button><br>
+                    <span id="answer_q3" class="answer" style="display: none;"></span>
                 </li>
                 <li>
                     <h3>Which team has won the most NBA championships?</h3>
-                    <input type="text" name="q4" placeholder="Your Answer"><br>
+                    <input type="text" name="q4" placeholder="Your Answer"><button type="button" id="show_answer_q4"
+                        onclick="showAnswer('q4')">Show Answer</button><br>
+                    <span id="answer_q4" class="answer" style="display: none;"></span>
                 </li>
                 <li>
                     <h3>Who holds the record for the most points scored in a single NBA game?</h3>
-                    <input type="radio" name="q5" value="a"><label>Michael Jordan</label><br>
-                    <input type="radio" name="q5" value="b"><label>Wilt Chamberlain</label><br>
-                    <input type="radio" name="q5" value="c"><label>Kobe Bryant</label><br>
+                    <input type="text" name="q5" placeholder="Your Answer"><button type="button" id="show_answer_q5"
+                        onclick="showAnswer('q5')">Show Answer</button><br>
+                    <span id="answer_q5" class="answer" style="display: none;"></span>
                 </li>
                 <li>
                     <h3>What is the regulation height of a basketball hoop in the NBA?</h3>
-                    <input type="text" name="q6" placeholder="Your Answer"><br>
+                    <input type="text" name="q6" placeholder="Your Answer"><button type="button" id="show_answer_q6"
+                        onclick="showAnswer('q6')">Show Answer</button><br>
+                    <span id="answer_q6" class="answer" style="display: none;"></span>
                 </li>
                 <li>
                     <h3>Which NBA player is known as "The Greek Freak"?</h3>
-                    <input type="radio" name="q7" value="a"><label>Kevin Durant</label><br>
-                    <input type="radio" name="q7" value="b"><label>Giannis Antetokounmpo</label><br>
-                    <input type="radio" name="q7" value="c"><label>LeBron James</label><br>
+                    <input type="text" name="q7" placeholder="Your Answer"><button type="button" id="show_answer_q7"
+                        onclick="showAnswer('q7')">Show Answer</button><br>
+                    <span id="answer_q7" class="answer" style="display: none;"></span>
                 </li>
                 <li>
                     <h3>Who is the NBA's all-time leading scorer?</h3>
-                    <input type="text" name="q8" placeholder="Your Answer"><br>
+                    <input type="text" name="q8" placeholder="Your Answer"><button type="button" id="show_answer_q8"
+                        onclick="showAnswer('q8')">Show Answer</button><br>
+                    <span id="answer_q8" class="answer" style="display: none;"></span>
                 </li>
                 <li>
                     <h3>Which NBA player has won the most MVP awards?</h3>
-                    <input type="radio" name="q9" value="a"><label>LeBron James</label><br>
-                    <input type="radio" name="q9" value="b"><label>Michael Jordan</label><br>
-                    <input type="radio" name="q9" value="c"><label>Kareem Abdul-Jabbar</label><br>
+                    <input type="text" name="q9" placeholder="Your Answer"><button type="button" id="show_answer_q9"
+                        onclick="showAnswer('q9')">Show Answer</button><br>
+                    <span id="answer_q9" class="answer" style="display: none;"></span>
                 </li>
                 <li>
                     <h3>What is the NBA team based in Toronto called?</h3>
-                    <input type="text" name="q10" placeholder="Your Answer"><br>
+                    <input type="text" name="q10" placeholder="Your Answer"><button type="button" id="show_answer_q10"
+                        onclick="showAnswer('q10')">Show Answer</button><br>
+                    <span id="answer_q10" class="answer" style="display: none;"></span>
                 </li>
             </ol>
             <div class="text-center mt-3">
-                <button type="button" onclick="gradeQuiz()">Submit</button>
+                <button type="button" onclick="gradeQuiz()" onmouseover="buttonGrow(this)"
+                    onmouseleave="buttonShrink(this)">Submit</button>
                 <button type="button" onclick="retryQuiz()">Retry</button>
+                <button type="button" onclick="showAllAnswers()">Show All Answers</button>
             </div>
             <div id="results" class="text-center mt-3"></div>
         </form>
     </div>
 </body>
+<script src="./trivia.js"></script>
 
 </html>

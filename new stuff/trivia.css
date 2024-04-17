@@ -34,9 +34,9 @@ form ol li h3 {
     color: #000;
 }
 
-input[type='radio'],
 input[type='text'] {
     margin-right: 10px;
+    padding: 5px;
 }
 
 button {
@@ -46,7 +46,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
@@ -59,11 +59,16 @@ button:hover {
 }
 
 .correct-answer {
-    color: green;
+    border: 2px solid green;
 }
 
 .incorrect-answer {
-    color: red;
+    border: 2px solid red;
+}
+
+.answer {
+    font-weight: bold;
+    color: green;
 }
 
 /* Media Queries */
